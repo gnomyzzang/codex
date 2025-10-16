@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6x6 카드 뒤집기 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>카드 뒤집기 기억력 게임</h1>
+        <p class="app__description">
+          6x6 그리드의 카드를 뒤집어 같은 그림을 짝지어 보세요. 두 장의 카드가
+          모두 뒤집혔을 때 같은 그림이면 유지되고, 다르면 다시 뒤집힙니다.
+        </p>
+        <div class="app__controls">
+          <div class="stat">
+            <span class="stat__label">시도 횟수</span>
+            <span class="stat__value" id="move-count">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat__label">경과 시간</span>
+            <span class="stat__value" id="elapsed-time">0:00</span>
+          </div>
+          <button id="restart-btn" type="button">다시 시작</button>
+        </div>
+      </header>
+
+      <section class="board" id="board" aria-label="카드 게임판"></section>
+
+      <dialog id="result-dialog">
+        <div class="dialog__content">
+          <h2>축하합니다!</h2>
+          <p>
+            모든 카드를 맞췄습니다. <span id="result-time"></span> 동안
+            <span id="result-moves"></span>번의 시도로 성공했어요.
+          </p>
+          <button id="dialog-restart" type="button">다시 플레이</button>
+        </div>
+      </dialog>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
